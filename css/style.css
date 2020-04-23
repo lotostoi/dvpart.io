@@ -1,0 +1,984 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat regular";
+  src: url("../font/Montserrat/montserrat-regular-webfont.eot");
+  src: url("../font/Montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-regular-webfont.woff") format("woff"), url("../font/Montserrat/montserrat-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat light";
+  src: url("../font/Montserrat/montserrat-light-webfont.eot");
+  src: url("../font/Montserrat/montserrat-light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat/montserrat-light-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-light-webfont.woff") format("woff"), url("../font/Montserrat/montserrat-light.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat bold";
+  src: url("../font/Montserrat/montserrat-bold-webfont.eot");
+  src: url("../font/Montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat/montserrat-bold-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-bold-webfont.woff") format("woff"), url("../font/Montserrat/montserrat-bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat black";
+  src: url("../font/Montserrat/montserrat-black-webfont.eot");
+  src: url("../font/Montserrat/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat/montserrat-black-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-black-webfont.woff") format("woff"), url("../font/Montserrat/montserrat-bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat ulra light";
+  src: url("../font/Montserrat/montserrat-ultralight-webfont.eot");
+  src: url("../font/Montserrat/montserrat-ultralight-webfont.eot?#iefix") format("embedded-opentype"), url("../font/Montserrat/montserrat-ultralight-webfont.woff2") format("woff2"), url("../font/Montserrat/montserrat-ultralight-webfont.woff") format("woff"), url("../font/Montserrat/montserrat-ultralight.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway regular";
+  src: url("../font/raleway/raleway-regular-webfont.eot");
+  src: url("../font/raleway/raleway-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/raleway/raleway-regular-webfont.woff2") format("woff2"), url("../font/releway/raleway-regular-webfont.woff") format("woff"), url("../font/raleway/raleway-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway medium";
+  src: url("../font/raleway/raleway-medium-webfont.eot");
+  src: url("../font/raleway/raleway-medium-webfont.eot#iefix") format("embedded-opentype"), url("../font/raleway/raleway-medium-webfont.woff2") format("woff2"), url("../font/releway/raleway-medium-webfont.woff") format("woff"), url("../font/raleway/raleway-medium.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("../font/raleway/raleway-bold-webfont.eot");
+  src: url("../font/raleway/raleway-bold-webfont#iefix") format("embedded-opentype"), url("../font/raleway/raleway-bold-webfont.woff2") format("woff2"), url("../font/releway/raleway-bold-webfont.woff") format("woff"), url("../font/raleway/raleway-bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway ExtraBold";
+  src: url("../font/raleway/raleway-extrabold-webfont.eot");
+  src: url("../font/raleway/raleway-extrabold-webfont#iefix") format("embedded-opentype"), url("../font/raleway/raleway-extrabold-webfont.woff2") format("woff2"), url("../font/releway/raleway-extrabold-webfont.woff") format("woff"), url("../font/raleway/raleway-extrabold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Raleway SemiBold";
+  src: url("../font/raleway/raleway-semibold-webfont.eot");
+  src: url("../font/raleway/raleway-semibold-webfont.eot#iefix") format("embedded-opentype"), url("../font/raleway/raleway-semibold-webfont.woff2") format("woff2"), url("../font/releway/raleway-semibold-webfont.woff") format("woff"), url("../font/raleway/raleway-semibold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto regular";
+  src: url("../font/Roboto/roboto-regular-webfont.eot");
+  src: url("../font/Roboto/roboto-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/Roboto/roboto-regular-webfont.woff2") format("woff2"), url("../font//Roboto/roboto-regular-webfont.woff") format("woff"), url("../font/Roboto/roboto-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab regular";
+  src: url("../font/Roboto_Slab/robotoslab-regular-webfont.eot");
+  src: url("../font/Roboto_Slab/robotoslab-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/Roboto_Slab/robotoslab-regular-webfont.woff2") format("woff2"), url("../font/Roboto_Slab/robotoslab-regular-webfont.woff") format("woff"), url("../font/Roboto_Slab/robotoslab-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Crimson-text regular";
+  src: url("../font/crimson-text/crimsontext-regular-webfont.eot");
+  src: url("../font/crimson-text/crimsontext-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/crimson-text/crimsontext-regular-webfont.woff2") format("woff2"), url("../font/crimson-text/crimsontext-regular-webfont.woff") format("woff"), url("../font/crimson-text/crimsontext-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open sans regular";
+  src: url("../font/open_sans/opensans-regular-webfont.eot");
+  src: url("../font/open_sans/opensans-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/open_sans/opensans-regular-webfont.woff2") format("woff2"), url("../font/open_sans/opensans-regular-webfont.woff") format("woff"), url("../font/open_sans/opensans-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open sans light";
+  src: url("../font/open_sans/opensans-light-webfont.eot");
+  src: url("../font/open_sans/opensans-light-webfont.eot#iefix") format("embedded-opentype"), url("../font/open_sans/opensans-light-webfont.woff2") format("woff2"), url("../font/open_sans/opensans-light-webfont.woff") format("woff"), url("../font/open_sans/opensans-light.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open sans bold";
+  src: url("../font/open_sans/opensans-bold-webfont.eot");
+  src: url("../font/open_sans/opensans-bold-webfont.eot#iefix") format("embedded-opentype"), url("../font/open_sans/opensans-bold-webfont.woff2") format("woff2"), url("../font/open_sans/opensans-bold-webfont.woff") format("woff"), url("../font/open_sans/opensans-bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open sans Extra bold";
+  src: url("../font/open_sans/opensans-extrabold-webfont.eot");
+  src: url("../font/open_sans/opensans-extrabold-webfont.eot#iefix") format("embedded-opentype"), url("../font/open_sans/opensans-extrabold-webfont.woff2") format("woff2"), url("../font/open_sans/opensans-extrabold-webfont.woff") format("woff"), url("../font/open_sans/opensans-extrabold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Intro regular";
+  src: url("../font/intro/intro-regular-webfont.eot");
+  src: url("../font/intro/intro-regular-webfont.eot#iefix") format("embedded-opentype"), url("../font/intro/intro-regular-webfont.woff2") format("woff2"), url("../font/intro/intro-regular-webfont.woff") format("woff"), url("../font/open_sans/opensans-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Myriad pro regular";
+  src: url("../font/myriad-pro/myriad-pro-regular.otf");
+  /*  src: url("../font/intro/intro-regular-webfont.eot#iefix") format("embedded-opentype"),
+    url("../font/intro/intro-regular-webfont.woff2") format("woff2"),
+    url("../font/intro/intro-regular-webfont.woff") format("woff"),
+    url("../font/open_sans/opensans-regular.ttf") format("ttf"); */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("./../font/fontello.eot?");
+  src: url("./../font/fontello.eot?#iefix") format("embedded-opentype"), url("./../font/fontello.woff2?") format("woff2"), url("./../font/fontello.woff?") format("woff"), url("./../font/fontello.ttf?") format("truetype"), url("./../font/fontello.svg?#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?31233252#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter:before {
+  content: '\f099';
+}
+
+/* '' */
+.icon-list-bullet:before {
+  content: '\f0ca';
+}
+
+/* '' */
+.icon-gplus:before {
+  content: '\f0d5';
+}
+
+/* '' */
+.icon-vkontakte:before {
+  content: '\f189';
+}
+
+/* '' */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contener {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 14px;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0 386px 0;
+  background: url(./../img/Background_01.jpg) no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header > div {
+  max-width: 1027px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header > div > .logoandmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header > div > .logoandmenu > .logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+header > div > .logoandmenu > .logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #7d7df1;
+}
+
+header > div > .logoandmenu > .logo:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #ababe6;
+}
+
+header > div > .logoandmenu > .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header > div > .logoandmenu > .nav > .menu {
+  display: none;
+}
+
+header > div > .logoandmenu > .nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > div > .logoandmenu > .nav > ul > li {
+  list-style-type: none;
+  margin-right: 17px;
+}
+
+header > div > .logoandmenu > .nav > ul > li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+header > div > .logoandmenu > .nav > ul > li > a:hover {
+  color: #7d7df1;
+}
+
+header > div > .logoandmenu > .nav > ul > li > a:active {
+  color: #ababe6;
+}
+
+header > div > .logoandmenu > .nav > ul > li:last-child {
+  margin-right: 0;
+}
+
+header > div > .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 141px;
+  margin-left: 57px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+header > div > .title > h1 {
+  font-size: 62px;
+  font-family: "Open sans bold", "Arial", Sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 73px;
+}
+
+header > div > .title > p {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  color: #ffffff;
+  margin-left: 4px;
+}
+
+header > div > .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 110px;
+  margin-left: 57px;
+}
+
+header > div > .search > label {
+  width: 160px;
+  height: 51px;
+  background-color: #dedede;
+  opacity: 0.77;
+  margin-left: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5863F8;
+  text-transform: uppercase;
+}
+
+header > div > .search > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 976px;
+  padding: 49px 60px;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header > div > .search > div > input {
+  width: 100%;
+  max-width: 670px;
+  height: 50px;
+  background-color: #eeeeee;
+  border: none;
+  outline: none;
+  padding: 0 17px;
+}
+
+header > div > .search > div > input::-webkit-input-placeholder {
+  color: #6d6d6d;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+}
+
+header > div > .search > div > input:-moz-placeholder {
+  color: #6d6d6d;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+}
+
+header > div > .search > div > input::-moz-placeholder {
+  color: #6d6d6d;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+}
+
+header > div > .search > div > input:-ms-input-placeholder {
+  color: #6d6d6d;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+}
+
+header > div > .search > div > input:hover {
+  background-color: #cecece;
+}
+
+header > div > .search > div > input:focus {
+  background-color: #979696;
+}
+
+header > div > .search > div > button {
+  margin-left: 10px;
+  width: 149px;
+  height: 50px;
+  background-color: #5863F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 27px 0 41px;
+  outline: none;
+  border: none;
+}
+
+header > div > .search > div > button > span {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+header > div > .search > div > button .arrow {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+header > div > .search > div > button:hover {
+  background-color: #3f4bfb;
+}
+
+header > div > .search > div > button:active {
+  background-color: #0b1aec;
+}
+
+@media only screen and (max-width: 1799px) {
+  header {
+    width: 100%;
+    background: url(./../img/Background_01.jpg) no-repeat;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 1699px) {
+  header {
+    width: 100%;
+    background: url(./../img/Background_01.jpg) no-repeat;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  header {
+    width: 100%;
+    background: url(./../img/Background_01.jpg) no-repeat;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 1247px) {
+  header {
+    width: 100%;
+    background: url(./../img/Background_01.jpg) no-repeat;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    padding: 20px 30px 386px 30px;
+    background: url(./../img/Background_01.jpg) no-repeat;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header > div > .logoandmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header > div > .logoandmenu > .logo {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform 200ms;
+    transition: -webkit-transform 200ms;
+    transition: transform 200ms;
+    transition: transform 200ms, -webkit-transform 200ms;
+  }
+  header > div > .logoandmenu > .logo:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: #7d7df1;
+  }
+  header > div > .logoandmenu > .logo:active {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: #ababe6;
+  }
+  header > div > .logoandmenu > .nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header > div > .logoandmenu > .nav > .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  header > div > .logoandmenu > .nav > .menu > .icon-list-bullet {
+    font-size: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  header > div > .logoandmenu > .nav > .menu > span {
+    display: none;
+    font-size: 25px;
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    font-weight: 700;
+  }
+  header > div > .logoandmenu > .nav > ul {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 39px;
+    left: -71px;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+  }
+  header > div > .logoandmenu > .nav > ul > li {
+    list-style-type: none;
+    margin-right: 0px;
+    background-color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 2px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  header > div > .logoandmenu > .nav > ul > li > a {
+    text-decoration: none;
+    text-transform: none;
+    text-decoration: none;
+    color: black;
+  }
+  header > div > .logoandmenu > .nav > ul > li > a:hover {
+    color: black;
+  }
+  header > div > .logoandmenu > .nav > ul > li > a:active {
+    color: black;
+  }
+  header > div > .logoandmenu > .nav > ul > li:last-child {
+    margin-right: 0;
+  }
+  header > div > .logoandmenu > .nav > ul.ul-active {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  header > div > .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 141px;
+    margin-left: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header > div > .title > h1 {
+    font-size: 42px;
+    font-family: "Open sans bold", "Arial", Sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 73px;
+    text-align: center;
+  }
+  header > div > .title > p {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+    color: #ffffff;
+    margin-left: 0px;
+    text-align: center;
+  }
+  header > div > .search {
+    margin-top: 110px;
+    margin-left: 0px;
+  }
+  header > div > .search > label {
+    width: 160px;
+    height: 51px;
+    background-color: #dedede;
+    opacity: 0.77;
+    margin-left: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
+  }
+  header > div > .search > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 976px;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header > div > .search > div > input {
+    width: 100%;
+    max-width: 670px;
+    height: 50px;
+    background-color: #eeeeee;
+    border: none;
+    outline: none;
+    padding: 0 17px;
+  }
+  header > div > .search > div > input::-webkit-input-placeholder {
+    color: #6d6d6d;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+  }
+  header > div > .search > div > input:-moz-placeholder {
+    color: #6d6d6d;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+  }
+  header > div > .search > div > input::-moz-placeholder {
+    color: #6d6d6d;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+  }
+  header > div > .search > div > input:-ms-input-placeholder {
+    color: #6d6d6d;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Open sans regular", "Arial", Sans-serif;
+  }
+  header > div > .search > div > input:hover {
+    background-color: #cecece;
+  }
+  header > div > .search > div > input:focus {
+    background-color: #979696;
+  }
+  header > div > .search > div > button {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 149px;
+    height: 50px;
+    background-color: #5863F8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 27px 0 41px;
+    outline: none;
+    border: none;
+  }
+  header > div > .search > div > button > span {
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  header > div > .search > div > button:hover {
+    background-color: #3f4bfb;
+  }
+  header > div > .search > div > button:active {
+    background-color: #0b1aec;
+  }
+}
+
+main {
+  padding: 61px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1104px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main > .main_1 {
+  font-family: "Open sans bold", "Arial", Sans-serif;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #5863F8;
+}
+
+main > .main_2 {
+  width: 371px;
+  font-family: "Open sans Extra bold", "Arial", Sans-serif;
+  font-size: 42px;
+  line-height: 56px;
+  color: #000000;
+}
+
+main > .main_3 {
+  margin-top: 13px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+main > .main_4 {
+  margin-top: 25px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}
+
+main > .main_5 {
+  margin-top: 80px;
+  font-family: "Open sans bold", "Arial", Sans-serif;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #5863F8;
+}
+
+main > .main_6 {
+  margin-top: 10px;
+  width: 371px;
+  font-family: "Open sans Extra bold", "Arial", Sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 56px;
+  color: #000000;
+}
+
+main > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 53px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main > form > textarea {
+  width: 100%;
+  max-width: 720px;
+  height: 280px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+  background-color: #f8f8f8;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main > form > textarea::-webkit-input-placeholder {
+  font-size: 13;
+  color: #cecece;
+}
+
+main > form > textarea:-moz-placeholder {
+  font-size: 13;
+  color: #cecece;
+}
+
+main > form > textarea::-moz-placeholder {
+  font-size: 13;
+  color: #cecece;
+}
+
+main > form > textarea:-ms-input-placeholder {
+  font-size: 13;
+  color: #cecece;
+}
+
+main > form > div {
+  width: 100%;
+  max-width: 352px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main > form > div > input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-bottom: 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main > form > div > input::-webkit-input-placeholder {
+  font-size: 13px;
+  color: #cecece;
+}
+
+main > form > div > input:-moz-placeholder {
+  font-size: 13px;
+  color: #cecece;
+}
+
+main > form > div > input::-moz-placeholder {
+  font-size: 13px;
+  color: #cecece;
+}
+
+main > form > div > input:-ms-input-placeholder {
+  font-size: 13px;
+  color: #cecece;
+}
+
+main > form > div > button {
+  /*  margin-top: 10px;
+                margin-left: 10px; */
+  width: 100%;
+  height: 60px;
+  background-color: #5863F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 27px 0 41px;
+  outline: none;
+  border: none;
+}
+
+main > form > div > button .arrowup {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+main > form > div > button > span {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+main > form > div > button:hover {
+  background-color: #3f4bfb;
+}
+
+main > form > div > button:active {
+  background-color: #0b1aec;
+}
+/*# sourceMappingURL=style.css.map */

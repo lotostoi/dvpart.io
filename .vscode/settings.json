@@ -1,0 +1,8 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "git.autoStash": true,
+    "emmet.excludeLanguages": [
+    
+        "markdown"
+    ]
+}

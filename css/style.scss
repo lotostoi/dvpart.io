@@ -1,0 +1,23 @@
+@import "fonts";
+@import "myvar";
+@import "mixins";
+
+// colors
+$blue: #5863F8;
+$bluehover: rgb(63, 75, 251);
+$blueactive: rgb(11, 26, 236);
+
+*{
+   margin: 0;
+   padding: 0; 
+}
+.contener{
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: $osr;
+    font-size: 14px;
+}
+
+@import "header";
+@import "main";
