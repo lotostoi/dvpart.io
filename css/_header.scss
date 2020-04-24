@@ -5,7 +5,7 @@ header {
     background-size: cover;
     box-sizing: border-box;
     & > div {
-        max-width: 1027px;
+        max-width: 1091px;
         width: 100%;
         margin: 0 auto;
         & > .logoandmenu {
@@ -162,33 +162,6 @@ header {
     }
 }
 
-@include mq(1800, max) {
-    header {
-        width: 100%;
-        // padding: 20px 314px 386px 315px;
-        background: url(./../img/Background_01.jpg) no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-    }
-}
-@include mq(1700, max) {
-    header {
-        width: 100%;
-        // padding: 20px 214px 386px 215px;
-        background: url(./../img/Background_01.jpg) no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-    }
-}
-@include mq(1440, max) {
-    header {
-        width: 100%;
-        //   padding: 20px 114px 386px 115px;
-        background: url(./../img/Background_01.jpg) no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-    }
-}
 @include mq(1248, max) {
     header {
         width: 100%;
@@ -196,16 +169,32 @@ header {
         background: url(./../img/Background_01.jpg) no-repeat;
         background-size: cover;
         box-sizing: border-box;
+        & > div {
+            max-width: 100%;
+            width: 100%;
+            padding: 0 40px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            & > .search {
+                max-width: 976px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 110px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }
 @include mq(768, max) {
     header {
         width: 100%;
-        padding: 20px 30px 386px 30px;
+        padding: 20px 30px 80px 30px;
         background: url(./../img/Background_01.jpg) no-repeat;
         background-size: cover;
         box-sizing: border-box;
         & > div {
+            padding: 0 10px;
             & > .logoandmenu {
                 display: flex;
                 justify-content: space-between;

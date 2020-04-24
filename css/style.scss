@@ -17,6 +17,7 @@ $blueactive: rgb(11, 26, 236);
     margin: 0 auto;
     font-family: $osr;
     font-size: 14px;
+    box-sizing: content-box;
 }
 
 @import "header";

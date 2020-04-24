@@ -231,6 +231,8 @@
   margin: 0 auto;
   font-family: "Open sans regular", "Arial", Sans-serif;
   font-size: 14px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 header {
@@ -243,7 +245,7 @@ header {
 }
 
 header > div {
-  max-width: 1027px;
+  max-width: 1091px;
   width: 100%;
   margin: 0 auto;
 }
@@ -492,36 +494,6 @@ header > div > .search > div > button:active {
   background-color: #0b1aec;
 }
 
-@media only screen and (max-width: 1799px) {
-  header {
-    width: 100%;
-    background: url(./../img/Background_01.jpg) no-repeat;
-    background-size: cover;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
-@media only screen and (max-width: 1699px) {
-  header {
-    width: 100%;
-    background: url(./../img/Background_01.jpg) no-repeat;
-    background-size: cover;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
-@media only screen and (max-width: 1439px) {
-  header {
-    width: 100%;
-    background: url(./../img/Background_01.jpg) no-repeat;
-    background-size: cover;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
 @media only screen and (max-width: 1247px) {
   header {
     width: 100%;
@@ -530,16 +502,40 @@ header > div > .search > div > button:active {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  header > div {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header > div > .search {
+    max-width: 976px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   header {
     width: 100%;
-    padding: 20px 30px 386px 30px;
+    padding: 20px 30px 80px 30px;
     background: url(./../img/Background_01.jpg) no-repeat;
     background-size: cover;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+  header > div {
+    padding: 0 10px;
   }
   header > div > .logoandmenu {
     display: -webkit-box;
@@ -980,5 +976,23 @@ main > form > div > button:hover {
 
 main > form > div > button:active {
   background-color: #0b1aec;
+}
+
+@media only screen and (max-width: 1247px) {
+  main {
+    padding: 20px 40px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
