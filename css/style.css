@@ -220,6 +220,11 @@
 }
 
 /* '' */
+.icon-facebook-circled:before {
+  content: '\f051';
+}
+
+/* '' */
 * {
   margin: 0;
   padding: 0;
@@ -1147,6 +1152,86 @@ main > form > div > button:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 89px 0 174px 0;
+  background-color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+footer > section {
+  max-width: 1091px;
+  width: 100%;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer > section > .blok_1 {
+  width: 100%;
+  max-width: 362px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer > section > .blok_1 > h3 {
+  font-family: "Open sans bold", "Arial", Sans-serif;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+footer > section > .blok_1 > .text {
+  margin-top: 21px;
+  width: 256px;
+  line-height: 19px;
+  color: #b1b1b1;
+}
+
+footer > section > .blok_1 > div {
+  margin-top: 32px;
+}
+
+footer > section > .blok_1 > div > a {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+footer > section > .blok_1 > .copyright {
+  margin-top: 54px;
+  line-height: 19px;
+  color: #b1b1b1;
+}
+
+footer > section > .blok_1 > .copyright > a {
+  text-decoration: none;
+  color: #5863f8;
+}
+
+@media only screen and (max-width: 1247px) {
+  footer {
+    width: 100%;
+    padding: 20px 0 130px 0;
+    background-color: black;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  footer > section {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 /*# sourceMappingURL=style.css.map */
