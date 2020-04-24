@@ -4,6 +4,7 @@ header {
     background: url(./../img/Background_02.jpg) no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    height: 100vh;
     & > div {
         max-width: 1091px;
         width: 100%;
