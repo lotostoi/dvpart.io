@@ -492,7 +492,7 @@ header > div > .search > div > button .arrow {
 }
 
 header > div > .search > div > button:hover {
-  background-color: #3f4bfb;
+  background-color: #a4a5b4;
 }
 
 header > div > .search > div > button:active {
@@ -783,7 +783,7 @@ header > div > .search > div > button:active {
     color: #ffffff;
   }
   header > div > .search > div > button:hover {
-    background-color: #3f4bfb;
+    background-color: #a4a5b4;
   }
   header > div > .search > div > button:active {
     background-color: #0b1aec;
@@ -978,7 +978,7 @@ main > form > div > button > span {
 }
 
 main > form > div > button:hover {
-  background-color: #3f4bfb;
+  background-color: #a4a5b4;
 }
 
 main > form > div > button:active {
@@ -1164,14 +1164,18 @@ footer {
 }
 
 footer > section {
-  max-width: 1091px;
+  max-width: 1150px;
   width: 100%;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer > section > .blok_1 {
+  margin-left: 70px;
   width: 100%;
   max-width: 362px;
   display: -webkit-box;
@@ -1215,6 +1219,73 @@ footer > section > .blok_1 > .copyright {
 footer > section > .blok_1 > .copyright > a {
   text-decoration: none;
   color: #5863f8;
+}
+
+footer > section > .blok_2 {
+  width: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+}
+
+footer > section > .blok_2 > h4 {
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 21px;
+}
+
+footer > section > .blok_2 > a {
+  line-height: 19px;
+  color: #5863f8;
+  margin-bottom: 11px;
+  text-decoration: none;
+}
+
+footer > section > .blok_2 > a:hover {
+  color: #a4a5b4;
+}
+
+footer > section > .blok_2 > a:active {
+  color: #0b1aec;
+}
+
+footer > section > .blok_3 {
+  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 147px;
+}
+
+footer > section > .blok_3 > h4 {
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 21px;
+}
+
+footer > section > .blok_3 > p {
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 11px;
+  text-decoration: none;
+}
+
+footer > section > .blok_3 > p:last-child {
+  margin-left: auto;
+  margin-top: 110px;
 }
 
 @media only screen and (max-width: 1247px) {

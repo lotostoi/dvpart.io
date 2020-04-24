@@ -4,11 +4,13 @@ footer {
     background-color: black;
     box-sizing: border-box;
     & > section {
-        max-width: 1091px;
+        max-width: 1150px;
         width: 100%;
         margin: 0 auto;
         flex-wrap: wrap;
+        display: flex;
         & > .blok_1 {
+            margin-left: 70px;
             width: 100%;
             max-width: 362px;
             display: flex;
@@ -42,6 +44,56 @@ footer {
                 }
             }
         }
+        & > .blok_2 {
+            width: 72px;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+           
+            & > h4 {
+                font-family: $osr;
+                font-size: 18px;
+                line-height: 24px;
+                color: #ffffff;
+                margin-bottom: 21px;
+            }
+            & > a {
+                line-height: 19px;
+                color: $blue;
+                margin-bottom: 11px;
+                text-decoration: none;
+                &:hover {
+                    color: $bluehover;
+                }
+                &:active {
+                    color: $blueactive;
+                }
+            }
+        }
+        & > .blok_3 {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 147px;
+          
+            & > h4 {
+                font-family: $osr;
+                font-size: 18px;
+                line-height: 24px;
+                color: #ffffff;
+                margin-bottom: 21px;
+            }
+            & > p {
+                line-height: 19px;
+                color: #ffffff;
+                margin-bottom: 11px;
+                text-decoration: none;
+            }
+            & > p:last-child{
+                margin-left: auto;
+                margin-top: 110px;
+            }
+        }
     }
 }
 @include mq(1248, max) {
@@ -56,7 +108,6 @@ footer {
             padding: 0 40px;
             margin: 0 auto;
             box-sizing: border-box;
-           
         }
     }
 }
