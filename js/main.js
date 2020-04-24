@@ -8,3 +8,5 @@ document.querySelector('.menu > span').addEventListener('click', (e) => {
     document.querySelector('.icon-list-bullet').style.display = 'block'
     document.querySelector('nav ul').classList.remove('ul-active')
 })
+
+

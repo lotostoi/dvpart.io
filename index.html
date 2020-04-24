@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <section class="waite_load">
+        <div>
+            <div class='cssload-loader'>
+                <div class='cssload-inner cssload-one'></div>
+                <div class='cssload-inner cssload-two'></div>
+                <div class='cssload-inner cssload-three'></div>
+            </div>
+        </div>
+
+    </section>
     <div class="contener">
         <header>
             <div class="bodyheader">
@@ -183,9 +193,16 @@
                     <p>Created by <a href="https://www.3dmark.info/index.php/ru/">www.3dmark.info</a> </p>
                 </div>
             </section>
-        </footer> 
+        </footer>
     </div>
     <script src="js/main.js"></script>
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                document.querySelector('.waite_load').classList.add('waite_load-off')
+            }, 1500)
+        }
+    </script>
 
 </body>
 

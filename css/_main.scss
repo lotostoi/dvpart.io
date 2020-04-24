@@ -63,15 +63,22 @@ main {
             background-color: #f8f8f8;
             padding: 20px;
             box-sizing: border-box;
+            color: #ffffff;
             @include placeholder {
                 font-size: 13;
                 color: #cecece;
             }
             &:hover {
                 background-color: rgb(206, 206, 206);
+                @include placeholder {
+                    color: #f0f0f0;
+                }
             }
             &:focus {
                 background-color: rgb(151, 150, 150);
+                @include placeholder {
+                    color: #f0f0f0;
+                }
             }
         }
         & > div {
@@ -95,9 +102,15 @@ main {
                 }
                 &:hover {
                     background-color: rgb(206, 206, 206);
+                    @include placeholder {
+                        color: #f0f0f0;
+                    }
                 }
                 &:focus {
                     background-color: rgb(151, 150, 150);
+                    @include placeholder {
+                        color: #f0f0f0;
+                    }
                 }
             }
             & > button {

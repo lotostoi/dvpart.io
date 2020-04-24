@@ -32,7 +32,30 @@ footer {
                 & > a {
                     text-decoration: none;
                     margin-right: 10px;
+                    &:hover > svg {
+                        & .fa {
+                            fill: #0f89ec;
+                        }
+                        & .ta {
+                            fill: #055b83;
+                        }
+                        & .ga {
+                            fill: #fa2815;
+                        }
+                    }
+                    &:active > svg {
+                        & .fa {
+                            fill: #074170;
+                        }
+                        & .ta {
+                            fill: #023349;
+                        }
+                        & .ga {
+                            fill: #800f05;
+                        }
+                    }
                 }
+
                 & .fa {
                     fill: #3b5998;
                 }

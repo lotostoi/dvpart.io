@@ -17,15 +17,10 @@ header {
                 text-transform: uppercase;
                 text-decoration: none;
                 color: #fff;
-                transform: scale(1);
-                transition: transform 200ms;
-
                 &:hover {
-                    transform: scale(1.1);
                     color: rgb(125, 125, 241);
                 }
                 &:active {
-                    transform: scale(1.1);
                     color: rgb(171, 171, 230);
                 }
             }
@@ -86,7 +81,7 @@ header {
         & > .search {
             display: flex;
             flex-direction: column;
-            margin-top: 10.7vh;
+            margin-top: 12.7vh;
             margin-left: 57px;
             & > label {
                 width: 160px;
@@ -204,16 +199,11 @@ header {
                     text-transform: uppercase;
                     text-decoration: none;
                     color: #fff;
-                    transform: scale(1);
-                    transition: transform 200ms;
-
                     &:hover {
-                        transform: scale(1.1);
-                        color: rgb(125, 125, 241);
+                        color: #fff;
                     }
                     &:active {
-                        transform: scale(1.1);
-                        color: rgb(171, 171, 230);
+                         color: #fff;
                     }
                 }
                 & > .nav {

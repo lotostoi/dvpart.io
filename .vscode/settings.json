@@ -4,5 +4,6 @@
     "emmet.excludeLanguages": [
     
         "markdown"
-    ]
+    ],
+    "workbench.colorTheme": "Slack Theme Dark Mode"
 }
