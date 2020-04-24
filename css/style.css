@@ -231,8 +231,7 @@
 }
 
 .contener {
-  width: 100vw;
-  margin: 0 auto;
+  width: 100%;
   font-family: "Open sans regular", "Arial", Sans-serif;
   font-size: 14px;
   -webkit-box-sizing: content-box;
@@ -246,7 +245,7 @@ header {
   background-size: cover;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header > div {
@@ -345,7 +344,7 @@ header > div > .title {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 141px;
+  margin-top: 14vh;
   margin-left: 57px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -376,7 +375,7 @@ header > div > .search {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 110px;
+  margin-top: 10.7vh;
   margin-left: 57px;
 }
 
@@ -665,7 +664,7 @@ header > div > .search > div > button:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 141px;
+    margin-top: 14vh;
     margin-left: 0px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -688,7 +687,7 @@ header > div > .search > div > button:active {
     text-align: center;
   }
   header > div > .search {
-    margin-top: 110px;
+    margin-top: 10.7vh;
     margin-left: 0px;
   }
   header > div > .search > label {
@@ -898,6 +897,14 @@ main > form > textarea:-ms-input-placeholder {
   color: #cecece;
 }
 
+main > form > textarea:hover {
+  background-color: #cecece;
+}
+
+main > form > textarea:focus {
+  background-color: #979696;
+}
+
 main > form > div {
   width: 100%;
   max-width: 352px;
@@ -943,9 +950,15 @@ main > form > div > input:-ms-input-placeholder {
   color: #cecece;
 }
 
+main > form > div > input:hover {
+  background-color: #cecece;
+}
+
+main > form > div > input:focus {
+  background-color: #979696;
+}
+
 main > form > div > button {
-  /*  margin-top: 10px;
-                margin-left: 10px; */
   width: 100%;
   height: 60px;
   background-color: #5863f8;
@@ -1210,6 +1223,30 @@ footer > section > .blok_1 > div > a {
   margin-right: 10px;
 }
 
+footer > section > .blok_1 > div .fa {
+  fill: #3b5998;
+}
+
+footer > section > .blok_1 > div .fb {
+  fill: #fff;
+}
+
+footer > section > .blok_1 > div .ta {
+  fill: #55acee;
+}
+
+footer > section > .blok_1 > div .tb {
+  fill: #f1f2f2;
+}
+
+footer > section > .blok_1 > div .ga {
+  fill: #dc4e41;
+}
+
+footer > section > .blok_1 > div.gb {
+  fill: #fff;
+}
+
 footer > section > .blok_1 > .copyright {
   margin-top: 54px;
   line-height: 19px;
@@ -1219,6 +1256,14 @@ footer > section > .blok_1 > .copyright {
 footer > section > .blok_1 > .copyright > a {
   text-decoration: none;
   color: #5863f8;
+}
+
+footer > section > .blok_1 > .copyright > a:hover {
+  color: #a4a5b4;
+}
+
+footer > section > .blok_1 > .copyright > a:active {
+  color: #0b1aec;
 }
 
 footer > section > .blok_2 {
@@ -1283,15 +1328,48 @@ footer > section > .blok_3 > p {
   text-decoration: none;
 }
 
-footer > section > .blok_3 > p:last-child {
+footer > section > .blok_3 > p .a {
+  fill: none;
+  stroke: #5863f8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+footer > section > .blok_3 > p:first-of-type > svg {
+  margin-right: 10px;
+}
+
+footer > section > .blok_3 > p:nth-of-type(2) > svg {
+  margin-right: 10px;
+}
+
+footer > section > .blok_3 > p:nth-of-type(3) > svg {
+  margin-right: 14px;
+}
+
+footer > section > .blok_3 > p:last-of-type {
   margin-left: auto;
   margin-top: 110px;
+}
+
+footer > section > .blok_3 > p:last-of-type > a {
+  color: #5863f8;
+  text-decoration: none;
+}
+
+footer > section > .blok_3 > p:last-of-type > a:hover {
+  color: #a4a5b4;
+}
+
+footer > section > .blok_3 > p:last-of-type > a:active {
+  color: #0b1aec;
 }
 
 @media only screen and (max-width: 1247px) {
   footer {
     width: 100%;
-    padding: 20px 0 130px 0;
+    padding: 20px 0 50px 0;
     background-color: black;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1303,6 +1381,100 @@ footer > section > .blok_3 > p:last-child {
     margin: 0 auto;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer > section > .blok_1 {
+    margin-left: 0px;
+  }
+  footer > section > .blok_2 {
+    margin-left: 0;
+  }
+  footer > section > .blok_3 {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  footer {
+    width: 100%;
+    padding: 20px 0 30px 0;
+    background-color: black;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  footer > section {
+    padding: 0 10px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer > section > .blok_1 {
+    margin-left: 0px;
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer > section > .blok_1 > .text {
+    width: 100%;
+    text-align: center;
+  }
+  footer > section > .blok_1 > .copyright {
+    margin-top: 14px;
+    text-align: center;
+  }
+  footer > section > .blok_2 {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer > section > .blok_2 > h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  footer > section > .blok_2 > a {
+    margin: 6px;
+  }
+  footer > section > .blok_3 {
+    margin-top: 30px;
+    margin-left: 0;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer > section > .blok_3 > p:last-of-type {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
