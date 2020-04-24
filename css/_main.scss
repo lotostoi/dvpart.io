@@ -12,7 +12,6 @@ main {
         color: $blue;
     }
     & > .main_2 {
-        width: 371px;
         font-family: $oseb;
         font-size: 42px;
         line-height: 56px;
@@ -41,7 +40,8 @@ main {
     }
     & > .main_6 {
         margin-top: 10px;
-        width: 371px;
+        width: 100%;
+        max-width: 371px;
         font-family: $oseb;
         font-weight: 800;
         font-size: 42px;
@@ -95,7 +95,7 @@ main {
                 height: 60px;
                 background-color: $blue;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
                 padding: 0 27px 0 41px;
                 outline: none;
@@ -108,6 +108,7 @@ main {
                     stroke-width: 2px;
                 }
                 & > span {
+                    margin-right: 22px;
                     text-transform: uppercase;
                     color: #ffffff;
                 }
@@ -131,5 +132,97 @@ main {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+
+        & > .main_2 {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        & > .main_5 {
+            margin-top: 40px;
+        }
+        & > .main_6 {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        & > form {
+            display: flex;
+            width: 100%;
+            margin-top: 53px;
+            justify-content: space-between;
+            box-sizing: border-box;
+            & > textarea {
+                width: 100%;
+                max-width: 720px;
+                height: 280px;
+                border: 1px solid #e8e8e8;
+                outline: none;
+                background-color: #f8f8f8;
+                padding: 20px;
+                box-sizing: border-box;
+                @include placeholder {
+                    font-size: 13;
+                    color: #cecece;
+                }
+            }
+            & > div {
+                width: 100%;
+                max-width: 352px;
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                & > input {
+                    width: 100%;
+                    height: 60px;
+                    border: 1px solid #e8e8e8;
+                    outline: none;
+                    background-color: #f8f8f8;
+                    padding: 20px;
+                    margin-bottom: 13px;
+                    box-sizing: border-box;
+                    @include placeholder {
+                        font-size: 13px;
+                        color: #cecece;
+                    }
+                }
+            }
+        }
+    }
+}
+@include mq(768, max) {
+    main {
+       
+        & > form {
+            display: flex;
+            width: 100%;
+            margin-top: 53px;
+            justify-content: center;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            & > textarea {
+                width: 100%;
+                max-width: 720px;
+                height: 280px;
+                border: 1px solid #e8e8e8;
+                outline: none;
+                background-color: #f8f8f8;
+                padding: 20px;
+                box-sizing: border-box;
+                @include placeholder {
+                    font-size: 13;
+                    color: #cecece;
+                }
+            }
+            & > div {
+                margin-top: 20px;
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+        }
     }
 }

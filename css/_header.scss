@@ -165,7 +165,7 @@ header {
 @include mq(1248, max) {
     header {
         width: 100%;
-        //   padding: 20px 64px 386px 65px;
+        padding: 20px 0 130px 0;
         background: url(./../img/Background_01.jpg) no-repeat;
         background-size: cover;
         box-sizing: border-box;
