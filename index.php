@@ -12,14 +12,52 @@
 
 <body>
     <section class="waite_load">
-        <div>
-            <div class='cssload-loader'>
-                <div class='cssload-inner cssload-one'></div>
-                <div class='cssload-inner cssload-two'></div>
-                <div class='cssload-inner cssload-three'></div>
+     <svg class="filter" version="1.1">
+                <defs>
+                    <filter id="gooeyness">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                            result="gooeyness" />
+                        <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="dots">
+                <div class="dot mainDot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+    </section>
+    <section class="modelWin">
+        <div class="good">
+            <span>X</span>
+            <p>Ваше сообщение успешно отправлено!</p>
+        </div>
+        <div class="error">
+            <span>X</span>
+            <p> Ошибка соеденения(404) - попробуйте позже</p>
+        </div>
+        <div class="wite">
+            <svg class="filter" version="1.1">
+                <defs>
+                    <filter id="gooeyness">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
+                            result="gooeyness" />
+                        <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="dots">
+                <div class="dot mainDot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
         </div>
-
     </section>
     <div class="contener">
         <header>
@@ -76,12 +114,12 @@
             <p class="main_5">Форма обратной связи</p>
             <p class="main_6">Есть вопрос? Напишите нам:</p>
             <form action="#" class='feedback'>
-                <textarea name="messagy" id="message" placeholder="Текс сообщения"></textarea>
+                <textarea name="text" id="text" placeholder="Текс сообщения"></textarea>
                 <div>
-                    <input type="text" name="" id="" placeholder="Тема сообщения">
-                    <input type="text" name="" id="" placeholder="Имя">
-                    <input type="email" name="" id="" placeholder="Email">
-                    <button type="submit">
+                    <input type="text" name="theme" id="theme" placeholder="Тема сообщения">
+                    <input type="text" name="name" id="name" placeholder="Имя">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <button type="submit" id="sendData">
                         <span>Найти</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.986" height="18.414"
                             viewBox="0 0 17.986 18.414">

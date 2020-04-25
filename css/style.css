@@ -365,6 +365,404 @@
   }
 }
 
+/* body {
+  align-items: center;
+  background: #708fd4;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+} */
+.filter {
+  position: absolute;
+  visibility: hidden;
+}
+
+.dots {
+  -webkit-filter: url(#gooeyness);
+          filter: url(#gooeyness);
+  padding: 30px;
+}
+
+.dot {
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 20px;
+  width: 32px;
+  height: 32px;
+}
+
+.dot:first-child {
+  -webkit-animation: FirstDot 3s infinite;
+          animation: FirstDot 3s infinite;
+}
+
+.dot:nth-child(2) {
+  -webkit-animation: SecondDot 3s infinite;
+          animation: SecondDot 3s infinite;
+}
+
+.dot:nth-child(3) {
+  -webkit-animation: ThirdDot 3s infinite;
+          animation: ThirdDot 3s infinite;
+}
+
+.dot:nth-child(4) {
+  -webkit-animation: FourthDot 3s infinite;
+          animation: FourthDot 3s infinite;
+}
+
+.dot:nth-child(5) {
+  -webkit-animation: FifthDot 3s infinite;
+          animation: FifthDot 3s infinite;
+}
+
+@-webkit-keyframes FirstDot {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  25% {
+    -webkit-transform: scale(2.5) translateX(0);
+            transform: scale(2.5) translateX(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  83% {
+    -webkit-transform: scale(1) translateX(240px);
+            transform: scale(1) translateX(240px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes FirstDot {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  25% {
+    -webkit-transform: scale(2.5) translateX(0);
+            transform: scale(2.5) translateX(0);
+  }
+  50% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  83% {
+    -webkit-transform: scale(1) translateX(240px);
+            transform: scale(1) translateX(240px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+}
+
+@-webkit-keyframes SecondDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  27% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  81% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes SecondDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  27% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  81% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes ThirdDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  29% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  79% {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes ThirdDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  29% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  79% {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes FourthDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  31% {
+    -webkit-transform: translateX(-160px);
+            transform: translateX(-160px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  77% {
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes FourthDot {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  31% {
+    -webkit-transform: translateX(-160px);
+            transform: translateX(-160px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  77% {
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes FifthDot {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  33% {
+    -webkit-transform: scale(1) translateX(-220px);
+            transform: scale(1) translateX(-220px);
+  }
+  50% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  75% {
+    -webkit-transform: scale(2.5) translateX(0);
+            transform: scale(2.5) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes FifthDot {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  33% {
+    -webkit-transform: scale(1) translateX(-220px);
+            transform: scale(1) translateX(-220px);
+  }
+  50% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  75% {
+    -webkit-transform: scale(2.5) translateX(0);
+            transform: scale(2.5) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+}
+
+.modelWin {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(122, 121, 121, 0.589);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modelWin > .wite,
+.modelWin > .good,
+.modelWin > .error {
+  display: none;
+  border-radius: 3px;
+  position: relative;
+  background-color: #156ff5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #032970;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  height: 100%;
+  max-height: 500px;
+}
+
+.modelWin > .wite > p,
+.modelWin > .good > p,
+.modelWin > .error > p {
+  margin: 0 10px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  font-size: 4vh;
+  color: #464646;
+  text-align: center;
+}
+
+.modelWin > .wite > span,
+.modelWin > .good > span,
+.modelWin > .error > span {
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.267);
+  color: #272626;
+  top: 20px;
+  right: 20px;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  line-height: 35px;
+  font-stretch: ultra-condensed;
+}
+
+.modelWin > .wite > span:hover,
+.modelWin > .good > span:hover,
+.modelWin > .error > span:hover {
+  background-color: rgba(200, 198, 198, 0.267);
+}
+
+.modelWin > .wite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modelWin > .wite-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modelWin > .wite-off {
+  display: none;
+}
+
+.modelWin > .good-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modelWin > .error-active {
+  border: 1px solid #e90707;
+  background-color: #e66a6a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modelWin-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -550,6 +948,8 @@ header > div > .search > div > input {
   border: none;
   outline: none;
   padding: 0 17px;
+  font-size: 16px;
+  border-radius: none;
 }
 
 header > div > .search > div > input::-webkit-input-placeholder {
@@ -995,7 +1395,8 @@ main > form > textarea {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #ffffff;
+  color: #1d1c1c;
+  font-size: 16px;
 }
 
 main > form > textarea::-webkit-input-placeholder {
@@ -1058,6 +1459,10 @@ main > form > textarea:focus:-ms-input-placeholder {
   color: #f0f0f0;
 }
 
+main > form > .error {
+  border: 1px solid #e61010;
+}
+
 main > form > div {
   width: 100%;
   max-width: 352px;
@@ -1072,6 +1477,7 @@ main > form > div {
 }
 
 main > form > div > input {
+  border-radius: none;
   width: 100%;
   height: 60px;
   border: 1px solid #e8e8e8;
@@ -1081,6 +1487,8 @@ main > form > div > input {
   margin-bottom: 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #1d1c1c;
+  font-size: 16px;
 }
 
 main > form > div > input::-webkit-input-placeholder {
@@ -1141,6 +1549,10 @@ main > form > div > input:focus::-moz-placeholder {
 
 main > form > div > input:focus:-ms-input-placeholder {
   color: #f0f0f0;
+}
+
+main > form > div > .error {
+  border: 1px solid #e61010;
 }
 
 main > form > div > button {

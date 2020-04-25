@@ -111,6 +111,8 @@ header {
                     border: none;
                     outline: none;
                     padding: 0 17px;
+                    font-size: 16px;
+                    border-radius: none;
                     @include placeholder {
                         color: #6d6d6d;
                         font-size: 13px;
