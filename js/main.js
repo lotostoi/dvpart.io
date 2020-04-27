@@ -21,11 +21,13 @@ let closeEr = document.querySelector('.error > span')
 let load = document.querySelector('.wite')
 let error = document.querySelector('.error')
 let good = document.querySelector('.good')
+let button = document.querySelector('#send')
 
 let regEXP = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
 
-document.querySelector('#sendData').addEventListener('click', (e) => {
+button.addEventListener('click', (e) => {
     e.preventDefault();
+
     if (-1 != email.value.search(regEXP) && theme.value != '' && name.value != '' && text.value != '') {
         mwin.classList.add('modelWin-active')
 
@@ -54,7 +56,7 @@ document.querySelector('#sendData').addEventListener('click', (e) => {
                     closeG.addEventListener('click', (e) => {
                         error.classList.remove('error-active')
                         load.classList.remove('wite-off')
-                        mwin.classList.remove('modelWin-active')                 
+                        mwin.classList.remove('modelWin-active')
                     })
                 }
             }).catch(() => {
@@ -66,7 +68,6 @@ document.querySelector('#sendData').addEventListener('click', (e) => {
                     mwin.classList.remove('modelWin-active')
                 })
             })
-
 
 
     } else {
@@ -122,7 +123,8 @@ document.querySelector('#sendData').addEventListener('click', (e) => {
 
     }
 
-
-
-
 })
+
+    // script  for recaptcha https://www.google.com/recaptcha/api.js
+
+  //  (function () { var w = window, C = '___grecaptcha_cfg', cfg = w[C] = w[C] || {}, N = 'grecaptcha'; var gr = w[N] = w[N] || {}; gr.ready = gr.ready || function (f) { (cfg['fns'] = cfg['fns'] || []).push(f); }; (cfg['render'] = cfg['render'] || []).push('onload'); w['__google_recaptcha_client'] = true; var d = document, po = d.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://www.gstatic.com/recaptcha/releases/wk6lx42JIeYmEAQSHndnyT8Q/recaptcha__ru.js'; var e = d.querySelector('script[nonce]'), n = e && (e['nonce'] || e.getAttribute('nonce')); if (n) { po.setAttribute('nonce', n); } var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();

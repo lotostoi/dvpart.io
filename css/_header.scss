@@ -18,9 +18,11 @@ header {
                 text-decoration: none;
                 color: #fff;
                 &:hover {
+                    cursor: pointer;
                     color: rgb(125, 125, 241);
                 }
-                &:active {
+                &:active { 
+                    cursor: pointer;
                     color: rgb(171, 171, 230);
                 }
             }
@@ -43,9 +45,11 @@ header {
                             color: #fff;
 
                             &:hover {
+                                cursor: pointer;
                                 color: rgb(125, 125, 241);
                             }
-                            &:active {
+                            &:active { 
+                                cursor: pointer;
                                 color: rgb(171, 171, 230);
                             }
                         }
@@ -110,9 +114,10 @@ header {
                     background-color: #eeeeee;
                     border: none;
                     outline: none;
-                    padding: 0 17px;
+                    padding: 17px;
                     font-size: 16px;
                     border-radius: none;
+
                     @include placeholder {
                         color: #6d6d6d;
                         font-size: 13px;
@@ -120,6 +125,7 @@ header {
                         font-family: $osr;
                     }
                     &:hover {
+                        cursor: pointer;
                         background-color: rgb(206, 206, 206);
                     }
                     &:focus {
@@ -149,9 +155,11 @@ header {
                         stroke-width: 2px;
                     }
                     &:hover {
+                        cursor: pointer;
                         background-color: $bluehover;
                     }
-                    &:active {
+                    &:active { 
+                        cursor: pointer;
                         background-color: $blueactive;
                     }
                 }
@@ -202,10 +210,12 @@ header {
                     text-decoration: none;
                     color: #fff;
                     &:hover {
+                        cursor: pointer;
                         color: #fff;
                     }
-                    &:active {
-                         color: #fff;
+                    &:active { 
+                        cursor: pointer;
+                        color: #fff;
                     }
                 }
                 & > .nav {
@@ -260,9 +270,11 @@ header {
                                 color: black;
 
                                 &:hover {
+                                    cursor: pointer;
                                     color: black;
                                 }
-                                &:active {
+                                &:active { 
+                                    cursor: pointer;
                                     color: black;
                                 }
                             }
@@ -336,6 +348,7 @@ header {
                             font-family: $osr;
                         }
                         &:hover {
+                            cursor: pointer;
                             background-color: rgb(206, 206, 206);
                         }
                         &:focus {
@@ -360,9 +373,11 @@ header {
                             color: #ffffff;
                         }
                         &:hover {
+                            cursor: pointer;
                             background-color: $bluehover;
                         }
-                        &:active {
+                        &:active { 
+                            cursor: pointer;
                             background-color: $blueactive;
                         }
                     }

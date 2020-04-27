@@ -70,6 +70,7 @@ main {
                 color: #cecece;
             }
             &:hover {
+                cursor: pointer;
                 background-color: rgb(206, 206, 206);
                 @include placeholder {
                     color: #f0f0f0;
@@ -108,6 +109,7 @@ main {
                     color: #cecece;
                 }
                 &:hover {
+                    cursor: pointer;
                     background-color: rgb(206, 206, 206);
                     @include placeholder {
                         color: #f0f0f0;
@@ -146,9 +148,11 @@ main {
                     color: #ffffff;
                 }
                 &:hover {
+                    cursor: pointer;
                     background-color: $bluehover;
                 }
                 &:active {
+                    cursor: pointer;
                     background-color: $blueactive;
                 }
             }

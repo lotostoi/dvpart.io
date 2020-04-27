@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--     <link href="./css/fontello.css" rel="stylesheet" type="text/css"> -->
+    <title>DVRART</title>
     <link href="./css/style.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+       function onSubmit(token) {
+           console.log('test');
+           grecaptcha . reset();
+
+           document.querySelector('#send').click();
+       }
+     </script>
 </head>
 
 <body>
@@ -40,40 +48,37 @@
             <p> Ошибка соеденения(404) - попробуйте позже</p>
         </div>
         <div class="wite">
-            <svg class="filter" version="1.1">
-                <defs>
-                    <filter id="gooeyness">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10"
-                            result="gooeyness" />
-                        <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
-                    </filter>
-                </defs>
-            </svg>
-            <div class="dots">
-                <div class="dot mainDot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+              <div class='sk-circle-bounce'>
+                    <div class='sk-child sk-circle-1'></div>
+                    <div class='sk-child sk-circle-2'></div>
+                    <div class='sk-child sk-circle-3'></div>
+                    <div class='sk-child sk-circle-4'></div>
+                    <div class='sk-child sk-circle-5'></div>
+                    <div class='sk-child sk-circle-6'></div>
+                    <div class='sk-child sk-circle-7'></div>
+                    <div class='sk-child sk-circle-8'></div>
+                    <div class='sk-child sk-circle-9'></div>
+                    <div class='sk-child sk-circle-10'></div>
+                    <div class='sk-child sk-circle-11'></div>
+                    <div class='sk-child sk-circle-12'></div>
+                </div>
         </div>
     </section>
     <div class="contener">
-        <header>
+        <header id="main">
             <div class="bodyheader">
                 <div class="logoandmenu">
-                    <a href="#" class="logo">Dvpart</a>
+                    <a href="index.php" class="logo">Dvpart</a>
                     <nav class="nav">
                         <div class="menu">
                             <i class="icon-list-bullet"></i>
                             <span>X</span>
                         </div>
                         <ul>
-                            <li><a href="#">Главная</a></li>
+                            <li><a href="#main">Главная</a></li>
                             <li><a href="#about">О нас</a> </li>
-                            <li><a href="#">Написать нам</a> </li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#writetous">Написать нам</a> </li>
+                            <li><a href="#contacts">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -111,7 +116,7 @@
                 ut labore et dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
-            <p class="main_5">Форма обратной связи</p>
+            <p class="main_5" id = "writetous">Форма обратной связи</p>
             <p class="main_6">Есть вопрос? Напишите нам:</p>
             <form action="#" class='feedback'>
                 <textarea name="text" id="text" placeholder="Текс сообщения"></textarea>
@@ -119,8 +124,9 @@
                     <input type="text" name="theme" id="theme" placeholder="Тема сообщения">
                     <input type="text" name="name" id="name" placeholder="Имя">
                     <input type="email" name="email" id="email" placeholder="Email">
-                    <button type="submit" id="sendData">
-                        <span>Найти</span>
+                    <input type="submit" value="send" id="send" style="display: none">
+                    <button id="sendData" class="g-recaptcha" data-sitekey="6Lc7a-4UAAAAALTUtwAlCGLog5sTj1HomExsmZdR" data-callback='onSubmit'>
+                        <span>Отправить</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.986" height="18.414"
                             viewBox="0 0 17.986 18.414">
                             <g transform="translate(1 1.414)">
@@ -195,7 +201,7 @@
                     <a href="#">Contact Us</a>
                     <a href="#">Services</a>
                 </div>
-                <div class="blok_3">
+                <div class="blok_3" id="contacts">
                     <h4>Контакты Хабаровск</h4>
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18.829" height="14.834"
@@ -235,7 +241,7 @@
     </div>
     <script src="js/main.js"></script>
     <script>
-        window.onload = () => {
+         window.onload = () => {
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
             }, 1500)
