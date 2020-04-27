@@ -8,9 +8,9 @@
     <title>DVRART</title>
     <link href="./css/style.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
+     <script>
        function onSubmit(token) {
-           console.log('test');
+
            grecaptcha . reset();
 
            document.querySelector('#send').click();
@@ -119,12 +119,13 @@
             <p class="main_5" id = "writetous">Форма обратной связи</p>
             <p class="main_6">Есть вопрос? Напишите нам:</p>
             <form action="#" class='feedback'>
-                <textarea name="text" id="text" placeholder="Текс сообщения"></textarea>
+                <textarea name="text" id="text" data-fillin="yes" placeholder="Текс сообщения"></textarea>
                 <div>
-                    <input type="text" name="theme" id="theme" placeholder="Тема сообщения">
-                    <input type="text" name="name" id="name" placeholder="Имя">
-                    <input type="email" name="email" id="email" placeholder="Email">
-                    <input type="submit" value="send" id="send" style="display: none">
+                    <input type="text" name="theme" id="theme" data-fillin="yes" placeholder="Тема сообщения">
+                    <input type="text" name="name" id="name" data-fillin="yes" placeholder="Имя">
+                    <input type="phone" name="phone" id="phone" data-fillin="yes" placeholder="Tелефон">
+                    <input type="email" name="email" id="email" data-fillin="yes" placeholder="Email">
+                    <input type="submit" value="send" id="send" data-fillin="yes" style="display: none">
                     <button id="sendData" class="g-recaptcha" data-sitekey="6Lc7a-4UAAAAALTUtwAlCGLog5sTj1HomExsmZdR" data-callback='onSubmit'>
                         <span>Отправить</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.986" height="18.414"
@@ -244,6 +245,8 @@
          window.onload = () => {
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
+                   let VForm = new ValidForm('.feedback', '#send', 'error')
+                   VForm.init()
             }, 1500)
         }
     </script>

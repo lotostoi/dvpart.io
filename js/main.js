@@ -23,12 +23,80 @@ let error = document.querySelector('.error')
 let good = document.querySelector('.good')
 let button = document.querySelector('#send')
 
-let regEXP = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
+let regEXPmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
+let regEXPPhone = /^\+\d{ 2 } \(\d{ 3 } \) \d{ 3 } -\d{ 2 } -\d{ 2 } $/
 
-button.addEventListener('click', (e) => {
+
+class ValidForm {
+    constructor(idForm, idSubmit, classNameActive) {
+        this.elForm = document.querySelector(`${idForm}`),
+            this.elSubmit = document.querySelector(`${idSubmit}`),
+            this.fields = this.elForm.querySelectorAll('input, textarea'),
+            this.classNameActive = classNameActive
+    }
+    regEXPEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
+    regEXPPhone = /^\+\d{ 2 } \(\d{ 3 } \) \d{ 3 } -\d{ 2 } -\d{ 2 } $/
+    init() {
+        return this._addHendler();
+    }
+    _valid() {
+        let result = true;
+        this.fields.forEach(e => {
+            console.log(e)
+            if (e.dataset.fillin == 'yes' && (e.type == 'text' || e.type == 'textarea')) {
+                if (e.value == '') {
+                    result = false
+                    e.classList.add(this.classNameActive)
+                    console.log('class')
+                } else {
+                    e.classList.remove(this.classNameActive)
+                }
+            } else if (e.dataset.fillin == 'yes' && e.type == 'phone') {
+                if (-1 == e.value.search(this.regEXPPhone)) {
+                    e.classList.add(this.classNameActive)
+                    result = false
+                } else {
+                    e.classList.remove(this.classNameActive)
+                }
+            } else if (e.dataset.fillin == 'yes' && e.type == 'email') {
+                if (-1 == e.value.search(this.regEXPEmail)) {
+                    e.classList.add(this.classNameActive)
+                    result = false
+                } else {
+                    e.classList.remove(this.classNameActive)
+                }
+            }
+        })
+        return result
+    }
+    _addHendler() {
+        let context = this
+        console.log(context)
+        this.elSubmit.addEventListener('click', (e) => {
+           
+            e.preventDefault();
+            if (context._valid() == 'false') {
+                console.log('good')
+            } else {
+                console.log('bad')
+            }
+
+        })
+
+    }
+
+}
+/* window.onload = () => {
+    let VForm = new ValidForm('.feedback', '#send', 'error')
+    VForm.init()
+} */
+
+
+
+/* button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (-1 != email.value.search(regEXP) && theme.value != '' && name.value != '' && text.value != '') {
+    if (-1 != email.value.search(regEXPmail) && theme.value != '' && name.value != '' && text.value != '') {
         mwin.classList.add('modelWin-active')
 
         fetch('./php/server.php', {
@@ -123,7 +191,7 @@ button.addEventListener('click', (e) => {
 
     }
 
-})
+}) */
 
     // script  for recaptcha https://www.google.com/recaptcha/api.js
 
