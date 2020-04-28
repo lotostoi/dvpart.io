@@ -692,6 +692,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 200;
 }
 
 .modelWin > .wite,
@@ -803,6 +804,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 * {
@@ -1441,10 +1446,48 @@ main > form {
           box-sizing: border-box;
 }
 
-main > form > textarea {
+main > form > .cont_input {
   width: 100%;
   max-width: 720px;
   height: 352px;
+  position: relative;
+  margin-left: 0;
+}
+
+main > form > .cont_input > p {
+  position: absolute;
+  top: -56px;
+  right: 20px;
+  display: none;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eb2525;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  color: white;
+}
+
+main > form > .cont_input > p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 20px solid #eb2525;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  bottom: -15px;
+  left: 90px;
+}
+
+main > form > .cont_input > .pON {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main > form > .cont_input > textarea {
+  width: 100%;
+  height: 100%;
   border: 1px solid #e8e8e8;
   outline: none;
   background-color: #f8f8f8;
@@ -1455,68 +1498,68 @@ main > form > textarea {
   font-size: 16px;
 }
 
-main > form > textarea::-webkit-input-placeholder {
+main > form > .cont_input > textarea::-webkit-input-placeholder {
   font-size: 13;
   color: #cecece;
 }
 
-main > form > textarea:-moz-placeholder {
+main > form > .cont_input > textarea:-moz-placeholder {
   font-size: 13;
   color: #cecece;
 }
 
-main > form > textarea::-moz-placeholder {
+main > form > .cont_input > textarea::-moz-placeholder {
   font-size: 13;
   color: #cecece;
 }
 
-main > form > textarea:-ms-input-placeholder {
+main > form > .cont_input > textarea:-ms-input-placeholder {
   font-size: 13;
   color: #cecece;
 }
 
-main > form > textarea:hover {
+main > form > .cont_input > textarea:hover {
   cursor: pointer;
   background-color: #cecece;
 }
 
-main > form > textarea:hover::-webkit-input-placeholder {
+main > form > .cont_input > textarea:hover::-webkit-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:hover:-moz-placeholder {
+main > form > .cont_input > textarea:hover:-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:hover::-moz-placeholder {
+main > form > .cont_input > textarea:hover::-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:hover:-ms-input-placeholder {
+main > form > .cont_input > textarea:hover:-ms-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:focus {
+main > form > .cont_input > textarea:focus {
   background-color: #979696;
 }
 
-main > form > textarea:focus::-webkit-input-placeholder {
+main > form > .cont_input > textarea:focus::-webkit-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:focus:-moz-placeholder {
+main > form > .cont_input > textarea:focus:-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:focus::-moz-placeholder {
+main > form > .cont_input > textarea:focus::-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > textarea:focus:-ms-input-placeholder {
+main > form > .cont_input > textarea:focus:-ms-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > .error {
+main > form > .cont_input > .error {
   border: 1px solid #e61010;
 }
 
@@ -1533,7 +1576,45 @@ main > form > div {
           flex-direction: column;
 }
 
-main > form > div > input {
+main > form > div > .cont_input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+main > form > div > .cont_input > p {
+  position: absolute;
+  top: -56px;
+  right: 20px;
+  display: none;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #eb2525;
+  font-family: "Open sans regular", "Arial", Sans-serif;
+  color: white;
+}
+
+main > form > div > .cont_input > p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 20px solid #eb2525;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  bottom: -15px;
+  left: 90px;
+}
+
+main > form > div > .cont_input > .pON {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main > form > div > .cont_input input {
   border-radius: none;
   width: 100%;
   height: 60px;
@@ -1541,75 +1622,74 @@ main > form > div > input {
   outline: none;
   background-color: #f8f8f8;
   padding: 20px;
-  margin-bottom: 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #1d1c1c;
   font-size: 16px;
 }
 
-main > form > div > input::-webkit-input-placeholder {
+main > form > div > .cont_input input::-webkit-input-placeholder {
   font-size: 13px;
   color: #cecece;
 }
 
-main > form > div > input:-moz-placeholder {
+main > form > div > .cont_input input:-moz-placeholder {
   font-size: 13px;
   color: #cecece;
 }
 
-main > form > div > input::-moz-placeholder {
+main > form > div > .cont_input input::-moz-placeholder {
   font-size: 13px;
   color: #cecece;
 }
 
-main > form > div > input:-ms-input-placeholder {
+main > form > div > .cont_input input:-ms-input-placeholder {
   font-size: 13px;
   color: #cecece;
 }
 
-main > form > div > input:hover {
+main > form > div > .cont_input input:hover {
   cursor: pointer;
   background-color: #cecece;
 }
 
-main > form > div > input:hover::-webkit-input-placeholder {
+main > form > div > .cont_input input:hover::-webkit-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:hover:-moz-placeholder {
+main > form > div > .cont_input input:hover:-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:hover::-moz-placeholder {
+main > form > div > .cont_input input:hover::-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:hover:-ms-input-placeholder {
+main > form > div > .cont_input input:hover:-ms-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:focus {
+main > form > div > .cont_input input:focus {
   background-color: #979696;
 }
 
-main > form > div > input:focus::-webkit-input-placeholder {
+main > form > div > .cont_input input:focus::-webkit-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:focus:-moz-placeholder {
+main > form > div > .cont_input input:focus:-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:focus::-moz-placeholder {
+main > form > div > .cont_input input:focus::-moz-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > input:focus:-ms-input-placeholder {
+main > form > div > .cont_input input:focus:-ms-input-placeholder {
   color: #f0f0f0;
 }
 
-main > form > div > .error {
+main > form > div > .cont_input > .error {
   border: 1px solid #e61010;
 }
 

@@ -4,6 +4,8 @@
 @import "waiteLoad";
 @import "modelWin";
 
+// hied Recaptcha
+.grecaptcha-badge { visibility: hidden; }
 // colors
 $blue: #5863f8;
 $bluehover: rgb(164, 165, 180);

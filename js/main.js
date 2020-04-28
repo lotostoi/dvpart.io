@@ -20,12 +20,14 @@ let button = document.querySelector('#send')
 
 
 class ValidForm {
-    constructor(idForm, idSubmit, startValid, classNameActive) {
+    constructor(idForm, idSubmit, startValid, requireFillOnnClass, classNameActive) {
         this.elForm = document.querySelector(`${idForm}`),
-            this.elSubmit = document.querySelector(`${idSubmit}`),
-            this.fields = this.elForm.querySelectorAll('input, textarea'),
-            this.startValid = this.elForm.querySelector(`${startValid}`),
-            this.classNameActive = classNameActive
+        this.elSubmit = document.querySelector(`${idSubmit}`),
+        this.fields = this.elForm.querySelectorAll('input, textarea'),
+        this.startValid = this.elForm.querySelector(`${startValid}`),
+        this.requireFillOnnClass = requireFillOnnClass,    
+        this.classNameActive = classNameActive
+        
     }
     regEXPEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
     regEXPPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
@@ -34,7 +36,7 @@ class ValidForm {
         return this._addHendler();
     }
     _focusVal() {
-        this.fields.forEach((e, i) => {
+        this.fields.forEach(e => {
             if ((e.type == 'text' || e.type == 'textarea' || e.type == 'email' || e.type == 'tel') && e.dataset.fillin == 'yes') {
                 this.flag.push({ flag: false, el: e })
             }
@@ -74,6 +76,7 @@ class ValidForm {
         })
     }
     _addHendler() {
+        this._addOffFocusHov()
         this._focusVal();
         this.startValid.addEventListener('click', (e) => {
             e.preventDefault();
@@ -84,7 +87,6 @@ class ValidForm {
                 })
                 return f
             }
-            console.log(this.flag)
             if (!res()) {
                 this.flag.forEach(e => {
                     if (e.flag == false) {
@@ -110,6 +112,23 @@ class ValidForm {
             e.flag = false
         })
     }
+    _addOffFocusHov() { 
+        this.fields.forEach(e => {
+            if ((e.type == 'text' || e.type == 'textarea' || e.type == 'email' || e.type == 'tel') && e.dataset.fillin == 'yes') {
+                e.addEventListener('blur', (evt) => { 
+                    if (evt.target.value == "") {
+                        let par = e.parentNode
+                        par.querySelector('p').classList.add(this.requireFillOnnClass)
+                    } else { 
+                        let par = e.parentNode
+                        par.querySelector('p').classList.remove(this.requireFillOnnClass)
+                    }
+
+                })
+            }
+        })
+
+    }
     _requesrToServer() {
         mwin.classList.add('modelWin-active')
 
@@ -126,6 +145,7 @@ class ValidForm {
                         good.classList.remove('good-active')
                         load.classList.remove('wite-off')
                         mwin.classList.remove('modelWin-active')
+
                         this._clearForm()
 
                     })
@@ -142,7 +162,7 @@ class ValidForm {
     }
 }
 
-let VForm = new ValidForm('.feedback', '#send', '#valid', 'error')
+let VForm = new ValidForm('.feedback', '#send', '#valid','pON', 'error')
 VForm.init()
 
 

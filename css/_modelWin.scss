@@ -59,6 +59,7 @@ $spinkit-spinner-color: #1100ff !default;
     background-color: rgba(122, 121, 121, 0.589);
     justify-content: center;
     align-items: center;
+    z-index: 200;
     & > .wite,
     & > .good,
     & > .error {

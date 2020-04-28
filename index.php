@@ -119,12 +119,27 @@
             <p class="main_5" id = "writetous">Форма обратной связи</p>
             <p class="main_6">Есть вопрос? Напишите нам:</p>
             <form action="#" class='feedback'>
-                <textarea name="text" id="text" data-fillin="yes" placeholder="Текс сообщения"></textarea>
+                 <div class="cont_input">
+                    <textarea name="text" id="text" data-fillin="yes" placeholder="Текс сообщения"></textarea>
+                    <p class="required_field">Это поле обязательно для заполнения</p>
+                </div>
                 <div>
-                    <input type="text" name="theme" id="theme" data-fillin="yes" placeholder="Тема сообщения">
-                    <input type="text" name="name" id="name" data-fillin="yes" placeholder="Имя">
-                    <input type="tel" name="phone" id="phone" data-fillin="yes" placeholder="Tелефон">
-                    <input type="email" name="email" id="email" data-fillin="yes" placeholder="Email">
+                    <div class="cont_input">
+                        <input type="text" name="theme" id="theme" data-fillin="yes" placeholder="Тема сообщения">
+                        <p class="required_field">Это поле обязательно для заполнения</p>
+                    </div>
+                    <div class='cont_input'>
+                        <input type="text" name="name" id="name" data-fillin="yes" placeholder="Имя">
+                        <p class="required_field">Это поле обязательно для заполнения</p>
+                    </div>
+                    <div class="cont_input">
+                        <input type="tel" name="phone" id="phone" data-fillin="yes" placeholder="Tелефон">
+                        <p class="required_field">Это поле обязательно для заполнения</p>
+                    </div>
+                    <div class="cont_input">
+                        <input type="email" name="email" id="email" data-fillin="yes" placeholder="Email">
+                        <p class="required_field">Это поле обязательно для заполнения</p>
+                    </div>
                     <input type="submit" value="send" id="send" data-fillin="yes" style="display: none">
                     <button id="sendData" class="g-recaptcha" data-sitekey="6Lc7a-4UAAAAALTUtwAlCGLog5sTj1HomExsmZdR" data-callback='onSubmit'  style="display: none"></button>
                     <button id="valid">
