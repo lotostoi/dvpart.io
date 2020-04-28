@@ -8,8 +8,8 @@ if (isset($_POST['name']) && isset($_POST['text']) && isset($_POST['theme']) && 
     // email  клиента
     $email_cl = $_POST['email'];
     // адрес владельца сайта
-    //$email_owner = "lotos_toi@mail.ru";
-    $email_owner = "the3dmark@yandex.ru";
+    $email_owner = "lotos_toi@mail.ru";
+    //$email_owner = "the3dmark@yandex.ru";
     // тема сообщения
     $theme = $_POST['theme'];
 

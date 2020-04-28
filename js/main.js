@@ -10,11 +10,6 @@ document.querySelector('.menu > span').addEventListener('click', (e) => {
 })
 
 // валидация и отправка формы
-let form = document.querySelector('.feedback')
-let email = document.querySelector('#email')
-let theme = document.querySelector('#theme')
-let name = document.querySelector('#name')
-let text = document.querySelector('#text')
 let mwin = document.querySelector('.modelWin')
 let closeG = document.querySelector('.good > span')
 let closeEr = document.querySelector('.error > span')
@@ -23,85 +18,104 @@ let error = document.querySelector('.error')
 let good = document.querySelector('.good')
 let button = document.querySelector('#send')
 
-let regEXPmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
-let regEXPPhone = /^\+\d{ 2 } \(\d{ 3 } \) \d{ 3 } -\d{ 2 } -\d{ 2 } $/
-
 
 class ValidForm {
-    constructor(idForm, idSubmit, classNameActive) {
+    constructor(idForm, idSubmit, startValid, classNameActive) {
         this.elForm = document.querySelector(`${idForm}`),
             this.elSubmit = document.querySelector(`${idSubmit}`),
             this.fields = this.elForm.querySelectorAll('input, textarea'),
+            this.startValid = this.elForm.querySelector(`${startValid}`),
             this.classNameActive = classNameActive
     }
     regEXPEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/
-    regEXPPhone = /^\+\d{ 2 } \(\d{ 3 } \) \d{ 3 } -\d{ 2 } -\d{ 2 } $/
+    regEXPPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
+    flag = []
     init() {
         return this._addHendler();
     }
-    _valid() {
-        let result = true;
-        this.fields.forEach(e => {
-            console.log(e)
-            if (e.dataset.fillin == 'yes' && (e.type == 'text' || e.type == 'textarea')) {
-                if (e.value == '') {
-                    result = false
-                    e.classList.add(this.classNameActive)
-                    console.log('class')
-                } else {
-                    e.classList.remove(this.classNameActive)
-                }
-            } else if (e.dataset.fillin == 'yes' && e.type == 'phone') {
-                if (-1 == e.value.search(this.regEXPPhone)) {
-                    e.classList.add(this.classNameActive)
-                    result = false
-                } else {
-                    e.classList.remove(this.classNameActive)
-                }
-            } else if (e.dataset.fillin == 'yes' && e.type == 'email') {
-                if (-1 == e.value.search(this.regEXPEmail)) {
-                    e.classList.add(this.classNameActive)
-                    result = false
-                } else {
-                    e.classList.remove(this.classNameActive)
-                }
+    _focusVal() {
+        this.fields.forEach((e, i) => {
+            if ((e.type == 'text' || e.type == 'textarea' || e.type == 'email' || e.type == 'tel') && e.dataset.fillin == 'yes') {
+                this.flag.push({ flag: false, el: e })
             }
         })
-        return result
+        this.fields.forEach((e, i) => {
+            if (e.dataset.fillin == 'yes' && (e.type == 'text' || e.type == 'textarea')) {
+                e.addEventListener('input', (evt) => {
+                    if (evt.target.value != '') {
+                        this.flag[i].flag = true
+                        evt.target.classList.remove(this.classNameActive)
+                    } else {
+                        evt.target.classList.add(this.classNameActive)
+                        this.flag[i].flag = false
+                    }
+                })
+            } else if (e.dataset.fillin == 'yes' && e.type == 'tel') {
+                e.addEventListener('input', (evt) => {
+                    if (-1 != evt.target.value.search(this.regEXPPhone)) {
+                        this.flag[i].flag = true
+                        evt.target.classList.remove(this.classNameActive)
+                    } else {
+                        evt.target.classList.add(this.classNameActive)
+                        this.flag[i].flag = false
+                    }
+                })
+            } else if (e.dataset.fillin == 'yes' && e.type == 'email') {
+                e.addEventListener('input', (evt) => {
+                    if (-1 != evt.target.value.search(this.regEXPEmail)) {
+                        evt.target.classList.remove(this.classNameActive)
+                        this.flag[i].flag = true
+                    } else {
+                        evt.target.classList.add(this.classNameActive)
+                        this.flag[i].flag = false
+                    }
+                })
+            }
+        })
     }
     _addHendler() {
-        let context = this
-        console.log(context)
-        this.elSubmit.addEventListener('click', (e) => {
-           
+        this._focusVal();
+        this.startValid.addEventListener('click', (e) => {
             e.preventDefault();
-            if (context._valid() == 'false') {
-                console.log('good')
-            } else {
-                console.log('bad')
+            let res = () => {
+                let f = true
+                this.flag.forEach(e => {
+                    if (!e.flag) { f = false }
+                })
+                return f
             }
+            console.log(this.flag)
+            if (!res()) {
+                this.flag.forEach(e => {
+                    if (e.flag == false) {
+                        e.el.classList.add(this.classNameActive)
+                    }
+                })
+            } else {
+                document.querySelector('#sendData').click();
+
+            }
+        })
+        this.elSubmit.addEventListener('click', (e) => {
+            e.preventDefault()
+            this._requesrToServer()
 
         })
-
     }
-
-}
-/* window.onload = () => {
-    let VForm = new ValidForm('.feedback', '#send', 'error')
-    VForm.init()
-} */
-
-
-
-/* button.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    if (-1 != email.value.search(regEXPmail) && theme.value != '' && name.value != '' && text.value != '') {
+    _clearForm() {
+        this.fields.forEach(e => {
+            e.value = ''
+        })
+        this.flag.forEach((e) => {
+            e.flag = false
+        })
+    }
+    _requesrToServer() {
         mwin.classList.add('modelWin-active')
 
         fetch('./php/server.php', {
             method: 'post',
-            body: new FormData(form)
+            body: new FormData(this.elForm)
         })
             .then(data => data.json())
             .then((data) => {
@@ -112,19 +126,8 @@ class ValidForm {
                         good.classList.remove('good-active')
                         load.classList.remove('wite-off')
                         mwin.classList.remove('modelWin-active')
-                        email.value = ''
-                        theme.value = ''
-                        text.value = ''
-                        name.value = ''
-                    })
+                        this._clearForm()
 
-                } else {
-                    load.classList.add('wite-off')
-                    error.classList.add('error-active')
-                    closeG.addEventListener('click', (e) => {
-                        error.classList.remove('error-active')
-                        load.classList.remove('wite-off')
-                        mwin.classList.remove('modelWin-active')
                     })
                 }
             }).catch(() => {
@@ -136,63 +139,12 @@ class ValidForm {
                     mwin.classList.remove('modelWin-active')
                 })
             })
-
-
-    } else {
-        if (-1 == email.value.search(regEXP)) {
-            {
-                email.classList.add('error');
-                email.addEventListener('input', (e) => {
-                    if (-1 != email.value.search(regEXP)) {
-                        email.classList.remove('error');
-                    } else {
-                        email.classList.add('error');
-                    }
-
-                })
-            }
-        }
-
-        if (theme.value == '') {
-            theme.classList.add('error');
-            theme.addEventListener('input', (e) => {
-                if (theme.value != '') {
-                    theme.classList.remove('error');
-                } else {
-                    theme.classList.add('error');
-                }
-
-            })
-        }
-
-        if (name.value == '') {
-            name.classList.add('error');
-            name.addEventListener('input', (e) => {
-                if (name.value != '') {
-                    name.classList.remove('error');
-                } else {
-                    name.classList.add('error');
-                }
-
-            })
-        }
-
-        if (text.value == '') {
-            text.classList.add('error');
-            text.addEventListener('input', (e) => {
-                if (text.value != '') {
-                    text.classList.remove('error');
-                } else {
-                    text.classList.add('error');
-                }
-
-            })
-        }
-
     }
+}
 
-}) */
+let VForm = new ValidForm('.feedback', '#send', '#valid', 'error')
+VForm.init()
 
-    // script  for recaptcha https://www.google.com/recaptcha/api.js
 
-  //  (function () { var w = window, C = '___grecaptcha_cfg', cfg = w[C] = w[C] || {}, N = 'grecaptcha'; var gr = w[N] = w[N] || {}; gr.ready = gr.ready || function (f) { (cfg['fns'] = cfg['fns'] || []).push(f); }; (cfg['render'] = cfg['render'] || []).push('onload'); w['__google_recaptcha_client'] = true; var d = document, po = d.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://www.gstatic.com/recaptcha/releases/wk6lx42JIeYmEAQSHndnyT8Q/recaptcha__ru.js'; var e = d.querySelector('script[nonce]'), n = e && (e['nonce'] || e.getAttribute('nonce')); if (n) { po.setAttribute('nonce', n); } var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();
+
+

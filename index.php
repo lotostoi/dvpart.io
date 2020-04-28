@@ -123,10 +123,11 @@
                 <div>
                     <input type="text" name="theme" id="theme" data-fillin="yes" placeholder="Тема сообщения">
                     <input type="text" name="name" id="name" data-fillin="yes" placeholder="Имя">
-                    <input type="phone" name="phone" id="phone" data-fillin="yes" placeholder="Tелефон">
+                    <input type="tel" name="phone" id="phone" data-fillin="yes" placeholder="Tелефон">
                     <input type="email" name="email" id="email" data-fillin="yes" placeholder="Email">
                     <input type="submit" value="send" id="send" data-fillin="yes" style="display: none">
-                    <button id="sendData" class="g-recaptcha" data-sitekey="6Lc7a-4UAAAAALTUtwAlCGLog5sTj1HomExsmZdR" data-callback='onSubmit'>
+                    <button id="sendData" class="g-recaptcha" data-sitekey="6Lc7a-4UAAAAALTUtwAlCGLog5sTj1HomExsmZdR" data-callback='onSubmit'  style="display: none"></button>
+                    <button id="valid">
                         <span>Отправить</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="17.986" height="18.414"
                             viewBox="0 0 17.986 18.414">
@@ -245,8 +246,8 @@
          window.onload = () => {
             setTimeout(() => {
                 document.querySelector('.waite_load').classList.add('waite_load-off')
-                   let VForm = new ValidForm('.feedback', '#send', 'error')
-                   VForm.init()
+                /*    let VForm = new ValidForm('.feedback', '#send', 'error')
+                   VForm.init() */
             }, 1500)
         }
     </script>
